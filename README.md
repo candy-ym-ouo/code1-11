@@ -2,6 +2,8 @@
 
 React + TypeScript 前端、Fastify API、BullMQ worker、PostgreSQL 和 Redis 组成的 pnpm monorepo。当前版本支持注册登录、创建工作区、上传真实音频、异步读取音频时长、创建固定时间范围片段、按时间段播放，以及章节/内容块和发布接口。
 
+`packages/align`（`@history/align`）是转录分段与音频对齐模块：把带词级时间戳的识别结果切分成段并吸附到固定时间范围片段；修订文本后重对齐会精确保留未改动词的时间锚点。模块为纯函数实现，重算结果可复现（见包内 README）。
+
 ## 环境要求
 
 - Node.js 22.13 或更高版本
